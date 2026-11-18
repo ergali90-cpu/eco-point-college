@@ -163,6 +163,8 @@ const kk = {
   'err.login': 'Пошта немесе құпиясөз қате',
   'err.exists': 'Бұл пошта тіркелген',
   'err.student_id_taken': 'Бұл студенттік ID бос емес',
+  'err.rate_limit': 'Тым көп әрекет. Бірнеше минуттан кейін қайталап көріңіз.',
+  'err.email_not_confirmed': 'Пошта расталмаған. Хаттағы сілтемені басыңыз.',
 };
 
 type Dict = Record<keyof typeof kk, string>;
@@ -330,6 +332,8 @@ const ru: Dict = {
   'err.login': 'Неверная почта или пароль',
   'err.exists': 'Эта почта уже зарегистрирована',
   'err.student_id_taken': 'Этот студенческий ID уже занят',
+  'err.rate_limit': 'Слишком много попыток. Повторите через несколько минут.',
+  'err.email_not_confirmed': 'Почта не подтверждена. Перейдите по ссылке из письма.',
 };
 
 export const translations: Record<Lang, Dict> = { kk, ru };

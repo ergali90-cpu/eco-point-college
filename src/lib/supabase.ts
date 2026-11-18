@@ -100,6 +100,8 @@ export function errKey(e: any): string {
   ];
   for (const k of known) if (m.includes(k)) return `err.${k}`;
   if (m.includes('submissions_no_dupes') || m.includes('duplicate key')) return 'err.duplicate';
+  if (/rate limit|too many|429/i.test(m) || e?.status === 429) return 'err.rate_limit';
+  if (/email not confirmed/i.test(m)) return 'err.email_not_confirmed';
   if (m.includes('Invalid login')) return 'err.login';
   if (m.includes('already registered')) return 'err.exists';
   if (m.includes('profiles_student_id_uq')) return 'err.student_id_taken';
