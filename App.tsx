@@ -112,7 +112,7 @@ export default function App() {
     <SafeAreaProvider>
       <I18nProvider>
         <AuthProvider>
-          <NavigationContainer theme={theme}>
+          <NavigationContainer theme={theme} documentTitle={{ formatter: (o) => (o?.title ? `${o.title} · Eco Point College` : 'Eco Point College') }}>
             <StatusBar style="light" />
             <Root />
           </NavigationContainer>
